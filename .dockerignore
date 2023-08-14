@@ -1,0 +1,11 @@
+# Exclude version control files
+.git
+composer.lock
+# Exclude build artifacts
+*.log
+*.tmp
+*.bak
+
+# Exclude directories
+node_modules/
+vendor/
