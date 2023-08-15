@@ -1,0 +1,10 @@
+version: '3'
+services:
+  server:
+    image: gemvcswoole-server
+    ports:
+      - "80:9501"
+    volumes:
+      - ./server.php:/var/www/server.php
+      - ./app:/app
+    

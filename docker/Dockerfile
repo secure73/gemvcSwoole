@@ -3,3 +3,4 @@ RUN apt update
 RUN apt upgrade -y
 RUN composer self-update
 RUN composer require gemvc/library
+CMD [ "php","server.php" ]
