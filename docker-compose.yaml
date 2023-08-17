@@ -6,5 +6,5 @@ services:
       - "80:9501"
     volumes:
       - ./server.php:/var/www/server.php
-      - ./app:/app
+      - ./app:/var/www/app
     
