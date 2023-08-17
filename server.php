@@ -4,15 +4,17 @@ declare(strict_types=1);
 use Swoole\Http\Request;
 use Swoole\Http\Response;
 use Swoole\Http\Server;
+use Gemvc\Core\GemToken;
 
 $http = new Server("0.0.0.0", 9501);
 
 $http->on(
     "start",
     function (Server $http) {
-        echo "Swoole HTTP server is started.\n";
+        echo "Gemvc API is started on port 80.\n";
     }
 );
+$gemToken = new GemToken();
 $http->on(
     "request",
     function (Request $request, Response $response) {
