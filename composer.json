@@ -1,5 +1,5 @@
 {
     "require": {
-        "gemvc/library": "V1.0.0.3"
+        "gemvc/library": "latest"
     }
 }
