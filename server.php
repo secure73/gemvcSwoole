@@ -34,7 +34,15 @@ $http->on(
             $token = $request->header['authorization'];
         }
         $remote_address = $request->server['remote_addr'];
-        $remote_port = $request->server->remote_port;
+        $remote_port = $request->server['remote_port'];
+        $remote_address .= $remote_address . $remote_port;
+        $payload = json_decode($request->post['payload']);
+        $service_request = $request->post['service'];
+        $serviceAndmethod = explode('/', $service_request);
+        $service_name = ucfirst($serviceAndmethod[0]);
+        $functionName = 'index';
+        (isset($serviceAndmethod[1])) ? $functionName = $serviceAndmethod[1] : $functionName = 'index';
+
         $response->header("Content-Type", "application/json");
         $response->end(
             json_encode($request)
@@ -43,8 +51,3 @@ $http->on(
 );
 
 $http->start();
-
-function dispatchRequest(Request $request)
-{
-    $token = $request->hader->authorization;
-}
