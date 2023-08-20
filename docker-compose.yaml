@@ -7,4 +7,5 @@ services:
     volumes:
       - ./server.php:/var/www/server.php
       - ./app:/var/www/app
+      - ./vendor:/var/www/vendor
     

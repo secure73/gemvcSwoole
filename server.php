@@ -1,15 +1,21 @@
 <?php
+
 declare(strict_types=1);
 require('vendor/autoload.php');
-require_once('vendor/gemvc/library/src/core/GemToken.php');
 require_once('app/config.php');
+
 use Swoole\Http\Request;
 use Swoole\Http\Response;
 use Swoole\Http\Server;
-//use Gemvc\Core\GemToken;
-//use Gemvc\GemToken;
+use Gemvc\Core\Security;
+use Gemvc\Core\RequestDispatcher;
+use Gemvc\GemToken;
 
 $http = new Server("0.0.0.0", 9501);
+
+$http->set([
+    'http_compression' => true, // Enable HTTP compression for HTTP/2
+]);
 
 $http->on(
     "start",
@@ -18,15 +24,27 @@ $http->on(
     }
 );
 
-$gemToken = new \Gemvc\Core\GemToken();
 $http->on(
     "request",
     function (Request $request, Response $response) {
+
+        $token = null;
+        if(isset($request->header['authorization']))
+        {
+            $token = $request->header['authorization'];
+        }
+        $remote_address = $request->server['remote_addr'];
+        $remote_port = $request->server->remote_port;
         $response->header("Content-Type", "application/json");
-        $response->end(json_encode($request));
+        $response->end(
+            json_encode($request)
+        );
     }
 );
 
 $http->start();
 
-
+function dispatchRequest(Request $request)
+{
+    $token = $request->hader->authorization;
+}

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "53a3f6dd26e45c2ae9fb60747ff81d02",
+    "content-hash": "e833c47493df97b9a63a2d62de9fd364",
     "packages": [
         {
             "name": "firebase/php-jwt",
@@ -71,16 +71,16 @@
         },
         {
             "name": "gemvc/library",
-            "version": "V1.0.0.3",
+            "version": "V1.0.0.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/secure73/gemvc.git",
-                "reference": "6647b48771fda3ae9035401c63f1937bc9c70485"
+                "reference": "22d2ee44f3313335877163d413d1ea146c786d6c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/secure73/gemvc/zipball/6647b48771fda3ae9035401c63f1937bc9c70485",
-                "reference": "6647b48771fda3ae9035401c63f1937bc9c70485",
+                "url": "https://api.github.com/repos/secure73/gemvc/zipball/22d2ee44f3313335877163d413d1ea146c786d6c",
+                "reference": "22d2ee44f3313335877163d413d1ea146c786d6c",
                 "shasum": ""
             },
             "require": {
@@ -91,7 +91,10 @@
             "type": "library",
             "autoload": {
                 "psr-4": {
-                    "Gemvc\\Library\\": "src/"
+                    "Gemvc\\": "src/",
+                    "Gemvc\\Core\\": "src/core/",
+                    "Gemvc\\Helper\\": "src/helper/",
+                    "Gemvc\\Database\\": "src/database/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -107,9 +110,9 @@
             "description": "core library of gemvc",
             "support": {
                 "issues": "https://github.com/secure73/gemvc/issues",
-                "source": "https://github.com/secure73/gemvc/tree/V1.0.0.3"
+                "source": "https://github.com/secure73/gemvc/tree/V1.0.0.5"
             },
-            "time": "2023-08-12T21:22:10+00:00"
+            "time": "2023-08-18T11:42:19+00:00"
         },
         {
             "name": "guzzlehttp/guzzle",
