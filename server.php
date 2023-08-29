@@ -28,11 +28,10 @@ $http->on(
 $http->on(
     "request",
     function (Request $request, Response $response) {
-        //$request2 = new RequestDispatcher($request);
         $security = new Security($request);
         $response->header("Content-Type", "application/json");
         $response->end(
-            json_encode($security->runApp())
+            json_encode($request)
         );
     }
 );
