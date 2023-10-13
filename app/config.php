@@ -7,6 +7,9 @@ const TOKEN_IP_RESTRICT = false;
 const TOKEN_USER_MACHINE_RESTRICT = true;
 const API_TOKEN_SECRET_KEY = 'your token secret key';
 const ENCRYPT_SECRET = 'your encrypt secret key';
+const REFRESH_TOKEN_SECRET = 'your refresh token secret';
+const ACCESS_TOKEN_SECRET = 'your access token secret';
+const LOGIN_TOKEN_SECRET = "your login token secret";
 const REFRESH_TOKEN_VALIDATE_SECOND = 7200;
 const ACCESS_TOKEN_VALIDATION_SECOND = 1200;
 const LOGIN_TOKEN_VALIDITY_SECOND = 5184000;
@@ -14,7 +17,7 @@ const DEFAULT_CONNECTION_NAME = 'default';
 const ENCRYPTION_ALGORYTHEM = 'AES-256-CBC';
 const SHA_ALGORYTHEM = 'sha256';
 
-const EMAIL_TEMPLATE_DIRECTORY = './app/email/themplates/';
+const EMAIL_TEMPLATE_DIRECTORY = './app/email/templates/';
 const EMAIL_CONTENT_STYLE_WRAPPER = 'app/email/style/default.html';
 const DEFAULT_EMAIL = 'info';
 
@@ -27,11 +30,7 @@ define('PROJECT_SERVER_IPS', $projects_ips);
  * this is list of public services, user need no tokens to access this services
  */
 $publicServices=[
-    'User'=>['help'],
-    'Index'=>['help'],
-    'Address'=>['help'],
     'Auth'=>['help','byEmail','register','renew'],
-    'Service'=>['help','id','index','create','update','delete']
 ];
 
 

@@ -1,0 +1,5 @@
+Templates Folder:
+This is where automatically generated emails, such as welcome emails, are stored.
+
+Style Folder:
+This is the designated location for saving email CSS and its associated resources for email styling.

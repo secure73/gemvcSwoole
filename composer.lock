@@ -8,16 +8,16 @@
     "packages": [
         {
             "name": "firebase/php-jwt",
-            "version": "v6.8.1",
+            "version": "v6.9.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/firebase/php-jwt.git",
-                "reference": "5dbc8959427416b8ee09a100d7a8588c00fb2e26"
+                "reference": "f03270e63eaccf3019ef0f32849c497385774e11"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/firebase/php-jwt/zipball/5dbc8959427416b8ee09a100d7a8588c00fb2e26",
-                "reference": "5dbc8959427416b8ee09a100d7a8588c00fb2e26",
+                "url": "https://api.github.com/repos/firebase/php-jwt/zipball/f03270e63eaccf3019ef0f32849c497385774e11",
+                "reference": "f03270e63eaccf3019ef0f32849c497385774e11",
                 "shasum": ""
             },
             "require": {
@@ -65,36 +65,38 @@
             ],
             "support": {
                 "issues": "https://github.com/firebase/php-jwt/issues",
-                "source": "https://github.com/firebase/php-jwt/tree/v6.8.1"
+                "source": "https://github.com/firebase/php-jwt/tree/v6.9.0"
             },
-            "time": "2023-07-14T18:33:00+00:00"
+            "time": "2023-10-05T00:24:42+00:00"
         },
         {
             "name": "gemvc/library",
-            "version": "V1.0.0.5",
+            "version": "V1.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/secure73/gemvc.git",
-                "reference": "22d2ee44f3313335877163d413d1ea146c786d6c"
+                "reference": "4a7c33a659610b5ae182a3b1115b0c4bc38f4c68"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/secure73/gemvc/zipball/22d2ee44f3313335877163d413d1ea146c786d6c",
-                "reference": "22d2ee44f3313335877163d413d1ea146c786d6c",
+                "url": "https://api.github.com/repos/secure73/gemvc/zipball/4a7c33a659610b5ae182a3b1115b0c4bc38f4c68",
+                "reference": "4a7c33a659610b5ae182a3b1115b0c4bc38f4c68",
                 "shasum": ""
             },
             "require": {
-                "firebase/php-jwt": "^6.3",
-                "guzzlehttp/guzzle": "^7.4",
-                "phpmailer/phpmailer": "^6.6"
+                "firebase/php-jwt": "^6.8",
+                "guzzlehttp/guzzle": "^7.6",
+                "phpmailer/phpmailer": "^6.8"
             },
             "type": "library",
             "autoload": {
                 "psr-4": {
                     "Gemvc\\": "src/",
-                    "Gemvc\\Core\\": "src/core/",
+                    "Gemvc\\Email\\": "src/email/",
                     "Gemvc\\Helper\\": "src/helper/",
-                    "Gemvc\\Database\\": "src/database/"
+                    "Gemvc\\Database\\": "src/database/",
+                    "Gemvc\\Http\\Request\\": "src/http/request/",
+                    "Gemvc\\http\\Response\\": "src/http/response/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -103,16 +105,16 @@
             ],
             "authors": [
                 {
-                    "name": "Ali",
+                    "name": "Ali Khorsandfard",
                     "email": "secure73@gmail.com"
                 }
             ],
             "description": "core library of gemvc",
             "support": {
                 "issues": "https://github.com/secure73/gemvc/issues",
-                "source": "https://github.com/secure73/gemvc/tree/V1.0.0.5"
+                "source": "https://github.com/secure73/gemvc/tree/V1.3.0"
             },
-            "time": "2023-08-18T11:42:19+00:00"
+            "time": "2023-10-12T08:09:16+00:00"
         },
         {
             "name": "guzzlehttp/guzzle",
@@ -441,16 +443,16 @@
         },
         {
             "name": "phpmailer/phpmailer",
-            "version": "v6.8.0",
+            "version": "v6.8.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/PHPMailer/PHPMailer.git",
-                "reference": "df16b615e371d81fb79e506277faea67a1be18f1"
+                "reference": "e88da8d679acc3824ff231fdc553565b802ac016"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/PHPMailer/PHPMailer/zipball/df16b615e371d81fb79e506277faea67a1be18f1",
-                "reference": "df16b615e371d81fb79e506277faea67a1be18f1",
+                "url": "https://api.github.com/repos/PHPMailer/PHPMailer/zipball/e88da8d679acc3824ff231fdc553565b802ac016",
+                "reference": "e88da8d679acc3824ff231fdc553565b802ac016",
                 "shasum": ""
             },
             "require": {
@@ -460,13 +462,13 @@
                 "php": ">=5.5.0"
             },
             "require-dev": {
-                "dealerdirect/phpcodesniffer-composer-installer": "^0.7.2",
+                "dealerdirect/phpcodesniffer-composer-installer": "^1.0",
                 "doctrine/annotations": "^1.2.6 || ^1.13.3",
                 "php-parallel-lint/php-console-highlighter": "^1.0.0",
                 "php-parallel-lint/php-parallel-lint": "^1.3.2",
                 "phpcompatibility/php-compatibility": "^9.3.5",
                 "roave/security-advisories": "dev-latest",
-                "squizlabs/php_codesniffer": "^3.7.1",
+                "squizlabs/php_codesniffer": "^3.7.2",
                 "yoast/phpunit-polyfills": "^1.0.4"
             },
             "suggest": {
@@ -509,7 +511,7 @@
             "description": "PHPMailer is a full-featured email creation and transfer class for PHP",
             "support": {
                 "issues": "https://github.com/PHPMailer/PHPMailer/issues",
-                "source": "https://github.com/PHPMailer/PHPMailer/tree/v6.8.0"
+                "source": "https://github.com/PHPMailer/PHPMailer/tree/v6.8.1"
             },
             "funding": [
                 {
@@ -517,20 +519,20 @@
                     "type": "github"
                 }
             ],
-            "time": "2023-03-06T14:43:22+00:00"
+            "time": "2023-08-29T08:26:30+00:00"
         },
         {
             "name": "psr/http-client",
-            "version": "1.0.2",
+            "version": "1.0.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/php-fig/http-client.git",
-                "reference": "0955afe48220520692d2d09f7ab7e0f93ffd6a31"
+                "reference": "bb5906edc1c324c9a05aa0873d40117941e5fa90"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/php-fig/http-client/zipball/0955afe48220520692d2d09f7ab7e0f93ffd6a31",
-                "reference": "0955afe48220520692d2d09f7ab7e0f93ffd6a31",
+                "url": "https://api.github.com/repos/php-fig/http-client/zipball/bb5906edc1c324c9a05aa0873d40117941e5fa90",
+                "reference": "bb5906edc1c324c9a05aa0873d40117941e5fa90",
                 "shasum": ""
             },
             "require": {
@@ -567,9 +569,9 @@
                 "psr-18"
             ],
             "support": {
-                "source": "https://github.com/php-fig/http-client/tree/1.0.2"
+                "source": "https://github.com/php-fig/http-client"
             },
-            "time": "2023-04-10T20:12:12+00:00"
+            "time": "2023-09-23T14:17:50+00:00"
         },
         {
             "name": "psr/http-factory",
