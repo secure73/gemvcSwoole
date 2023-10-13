@@ -1,2 +1,7 @@
 vendor
 composer.lock
+docker-composer.yaml
+Dockerfile
+LICENSE
+README.md
+.gitIgnore
