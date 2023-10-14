@@ -1,4 +1,5 @@
 <?php
+namespace App;
 
 use Gemvc\Core\Controller;
 class IndexController extends Controller
