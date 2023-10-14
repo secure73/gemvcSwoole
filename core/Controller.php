@@ -2,7 +2,6 @@
 
 namespace Gemvc\Core;
 
-use Gemvc\Helper\TypeHelper;
 use Gemvc\Http\Request;
 use Gemvc\Http\JsonResponse;
 
@@ -24,7 +23,8 @@ class Controller
         $this->request = $request;
     }
 
-    public function runMerhod()
+    
+    public function execute()
     {
         if (method_exists($this, $this->request->requestMethod)) {
             call_user_func([$this, $this->request->requestMethod]);
@@ -56,13 +56,13 @@ class Controller
                 {
                     $message .= $item;
                 }
+                $this->endExecution();
                 $this->response->badRequest('in Payload not found:'.$message);
             }
             else
             {
                 return $this->payload;
             }
-
         }
         return false;
 
