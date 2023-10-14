@@ -5,6 +5,7 @@ const LIBRARY = 'gemvc/lib/';
 const URL = 'https://your_domain.com';
 const TOKEN_IP_RESTRICT = false;
 const TOKEN_USER_MACHINE_RESTRICT = true;
+const TOKEN_ISSUER = 'your company or project name';
 const API_TOKEN_SECRET_KEY = 'your token secret key';
 const ENCRYPT_SECRET = 'your encrypt secret key';
 const REFRESH_TOKEN_SECRET = 'your refresh token secret';
@@ -30,7 +31,7 @@ define('PROJECT_SERVER_IPS', $projects_ips);
  * this is list of public services, user need no tokens to access this services
  */
 $publicServices=[
-    'Auth'=>['help','byEmail','register','renew'],
+    'Auth'=>['login','byEmail','register','renew'],
 ];
 
 
