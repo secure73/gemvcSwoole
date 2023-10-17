@@ -18,8 +18,8 @@ const DEFAULT_CONNECTION_NAME = 'default';
 const ENCRYPTION_ALGORYTHEM = 'AES-256-CBC';
 const SHA_ALGORYTHEM = 'sha256';
 
-const EMAIL_TEMPLATE_DIRECTORY = './app/email/templates/';
-const EMAIL_CONTENT_STYLE_WRAPPER = 'app/email/style/default.html';
+const EMAIL_TEMPLATE_DIRECTORY = './email/templates/';
+const EMAIL_CONTENT_STYLE_WRAPPER = './email/style/default.html';
 const DEFAULT_EMAIL = 'info';
 
 const FILE_ROOT = ' the path for saving your files ex: /var/www/vhosts/gemvc.com/files.your_domain.com/';
