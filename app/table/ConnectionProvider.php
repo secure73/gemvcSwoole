@@ -1,17 +1,21 @@
 <?php
 namespace Table;
 use Gemvc\Database\PdoConnection;
-use Gemvc\Database\PdoQuery;
 
-class DbQuery
+class ConnectionProvider
 {
-    public static function connect(string $connectionName):PdoQuery
+    public static function connect(string $connectionName = null):PdoConnection
     {
        $options__db = [
             \PDO::ATTR_PERSISTENT => true,
             \PDO::ATTR_ERRMODE => \PDO::ERRMODE_EXCEPTION,
         ];
-        return new PdoQuery(new PdoConnection(self::dsn($connectionName),"root","",$options__db));
+        if($connectionName)
+        {
+        return new  PdoConnection(self::dsn($connectionName),"root","",$options__db);
+
+        }
+        return new PdoConnection(self::dsn('default'),"root","",$options__db);
     }
 
     private static function dsn(string $connecionName):string

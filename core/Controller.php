@@ -1,6 +1,6 @@
 <?php
 
-namespace Gemvc\Core;
+namespace Core;
 
 use Gemvc\Http\Request;
 use Gemvc\Http\JsonResponse;

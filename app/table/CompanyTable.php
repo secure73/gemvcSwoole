@@ -1,20 +1,26 @@
 <?php
 namespace App\Table;
 
-use Gemvc\Database\PdoConnection;
-use Gemvc\Database\QueryBuilder;
+use Core\interface\TableInterface;
+use Gemvc\Database\PdoQuery;
+use Gemvc\Trait\Controller\RemoveTrait;
+use Gemvc\Trait\Table\InsertTrait;
+use Table\ConnectionProvider;
 
-class CompanyTable 
-{
-    public PdoConnection $pdoQuery;
-    public QueryBuilder $queryBuilder;
+class CompanyTable extends PdoQuery implements TableInterface{
+    use InsertTrait;
+    use RemoveTrait;
+    public $id;
+    public $name;
+
     public function __construct()
     {
+        parent::__construct(ConnectionProvider::connect());
     }
 
-    public function insert()
+    public function getTable():string
     {
-       $query = QueryBuilder::insert('companies')->columns('name','companyfiled')->values('haa','bb');
+        return 'companies';
     }
 
 

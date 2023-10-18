@@ -1,11 +1,13 @@
 <?php
 
-namespace Gemvc\Database;
+namespace Core;
+
+use Gemvc\Database\PdoQuery;
 
 /**
  * provide Predefeined commonly used sql Queries for PHP objects trough its function.
  */
-class Crud extends QueryProvider
+class Crud extends PdoQuery
 {
     protected ?string $table;
     public int $id;
