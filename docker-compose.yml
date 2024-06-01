@@ -1,0 +1,11 @@
+version: '3.9'
+
+services:
+  www:
+    build: .
+    ports:
+      - "9501:9501"
+    volumes:
+      - 'D:/OneDrive/Desktop/gemvcSwoole:/var/www'
+    working_dir: /var/www
+    command: ["php", "server.php"]

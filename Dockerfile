@@ -1,7 +1,7 @@
-FROM openswoole/swoole:4.12.1-php8.2
+FROM openswoole/swoole:latest
 RUN apt update
 RUN apt upgrade -y
 RUN composer self-update
-RUN composer require gemvc/library
+RUN composer create-project gemvc/installer .
 RUN mv html app
 CMD [ "php","server.php" ]
